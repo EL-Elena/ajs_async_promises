@@ -1,8 +1,10 @@
-import GameSavingLoader from './GameSavingLoader';
-
-GameSavingLoader.load()
-  .then((saving) => {
-    saving;
-    throw new Error('err');
-  })
-  .catch((error) => error);
+export default class GameSaving {
+  id = undefined;
+  created = undefined;
+  userInfo = {
+    id: undefined,
+    name: undefined,
+    level: undefined,
+    points: undefined,
+  } 
+}

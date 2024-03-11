@@ -1,23 +1,16 @@
-import GameSavingLoader from '../GameSavingLoader';
-import * as index from '../index';
+import GameSaving from '../index';
 
 const correct = {
-  id: 9,
-  created: 1546300800,
+  id: undefined,
+  created: undefined,
   userInfo: {
-    id: 1,
-    name: 'Hitman',
-    level: 10,
-    points: 2000,
+    id: undefined,
+    name: undefined,
+    level: undefined,
+    points: undefined,
   },
 };
 
-test('Checking saving', async () => {
-  const value = await GameSavingLoader.load();
-  return expect(value).toEqual(correct);
-});
-
-test('Checking error', async () => {
-  await GameSavingLoader.load()
-    .catch((error) => expect(error).toEqual('err'));
+test(('Creating new GameSaving'), () => {
+  expect(new GameSaving()).toEqual(correct);
 });
